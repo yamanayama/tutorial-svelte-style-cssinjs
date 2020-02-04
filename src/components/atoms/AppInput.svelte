@@ -1,4 +1,10 @@
 <script>
-export let value;
+  export let value = "";
+  export let placeholder = "";
 </script>
-<input type="text" value={value} />
+
+<style>
+
+</style>
+
+<input type="text" {value} {placeholder} />

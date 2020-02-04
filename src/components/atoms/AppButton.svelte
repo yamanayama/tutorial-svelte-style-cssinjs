@@ -1,2 +1,7 @@
+<style>
 
-<button><slot /></button>
+</style>
+
+<button>
+  <slot />
+</button>

@@ -1,9 +1,7 @@
 <script>
-import AppButton from '../../components/atoms/AppButton.svelte'
-import AppLabel from '../../components/atoms/AppLabel.svelte'
-import AppInput from '../../components/atoms/AppInput.svelte'
+  import AppSearchItemCondition from "../../components/organisms/AppSearchItemCondition.svelte";
+  import AppSearchItemResults from "../../components/organisms/AppSearchItemResults.svelte";
 </script>
 
-<AppLabel>エリア</AppLabel>
-<AppInput>エリア</AppInput>
-<AppButton>送信</AppButton>
+<AppSearchItemCondition />
+<AppSearchItemResults />

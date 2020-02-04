@@ -1,1 +1,7 @@
-<label><slot /></label>
+<style>
+
+</style>
+
+<label>
+  <slot />
+</label>
