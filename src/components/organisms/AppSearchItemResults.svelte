@@ -1,5 +1,5 @@
 <script>
-  import AppItemListPatterns from "../../components/molecules/AppItemListPatterns.svelte";
+  import AppItemListPattern from "../../components/molecules/AppItemListPattern.svelte";
 
   let items = [
     {
@@ -24,7 +24,7 @@
   }
 </style>
 
-<AppItemListPatterns />
+<AppItemListPattern />
 
 {#each items as item (item.id)}
   <div class="box">{item.name}</div>

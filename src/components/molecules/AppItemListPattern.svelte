@@ -1,20 +1,13 @@
 <script>
   import AppIcon from "../atoms/AppIcon.svelte";
   import AppLabel from "../atoms/AppLabel.svelte";
-
-  export let type = "list";
-
-  let attr = {
-    list: {
-      caption: "一覧で見る"
-    },
-    map: {
-      caption: "地図で見る"
-    }
-  };
 </script>
 
 <span>
-  <AppIcon {type} />
-  <AppLabel>{attr[type].caption}</AppLabel>
+  <AppIcon type="list" />
+  <AppLabel>一覧で見る</AppLabel>
+</span>
+<span>
+  <AppIcon type="map" />
+  <AppLabel>地図で見る</AppLabel>
 </span>
