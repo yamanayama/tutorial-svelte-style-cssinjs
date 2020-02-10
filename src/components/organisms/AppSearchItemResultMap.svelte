@@ -4,6 +4,12 @@
   export let items = [];
 </script>
 
+<style>
+  .map {
+    width: 100%
+  }
+</style>
+
 <div>
-MAP
+  <img src="map.png" alt="map" class="map">
 </div>
