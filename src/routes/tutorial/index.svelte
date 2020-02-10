@@ -1,10 +1,10 @@
 <script>
   import AppSearchItemCondition from "../../components/organisms/AppSearchItemCondition.svelte";
-  import AppSearchItemResults from "../../components/organisms/AppSearchItemResults.svelte";
+  import AppSearchItemResult from "../../components/organisms/AppSearchItemResult.svelte";
 </script>
 
 <AppSearchItemCondition />
-<AppSearchItemResults />
+<AppSearchItemResult />
 Icons made by
 <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">
   Those Icons

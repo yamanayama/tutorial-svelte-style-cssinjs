@@ -1,7 +1,8 @@
 <script>
   import AppItemListPattern from "../../components/molecules/AppItemListPattern.svelte";
+  import AppSearchItemResultCards from "./AppSearchItemResultCards.svelte";
+  import AppSearchItemResultMap from "./AppSearchItemResultMap.svelte";
   import AppSearchItem from "./AppSearchItem.svelte";
-  import AppLabel from "../atoms/AppLabel.svelte";
 
   let items = [
     {
@@ -89,12 +90,10 @@
       isFavorite: false
     }
   ];
+
+  let isList = true;
 </script>
 
-<AppItemListPattern />
+<AppItemListPattern bind:isList={isList}/>
 
-{#each items as item (item.id)}
-  <AppSearchItem {...item} />
-{:else}
-  <AppLabel>検索結果なし</AppLabel>
-{/each}
+<svelte:component this={isList ? AppSearchItemResultCards : AppSearchItemResultMap} {items}/>
