@@ -1,7 +1,20 @@
-<style>
+<!-- import { css } from "emotion";
 
-</style>
+const backgroundColor = ({
+		primary,
+		secondary,
+		background
+	}) =>
+	primary ? "red" : secondary ? "green" : background;
 
-<button>
-  <slot />
-</button>
+export const appButton = (props) => css `
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 2rem 1rem;
+  appearance: none;
+  background: ${props.backgroundColor};
+`;
+
+//svelte的にはこう書いてほしいぽいけど動かない
+// let dynamicStyle = (props) => css `color: ${props.color}` -->
