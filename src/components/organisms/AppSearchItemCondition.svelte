@@ -4,13 +4,13 @@
 
   import { css,keyframes } from "emotion";
   import Color from "../../apps/style/Color.js";
-  import { mq } from "../../apps/style/Base.js";
+  import { mq,baseStyle,square } from "../../apps/style/Base.js";
 
   export let searchFreeword = "";
 
 
   //キーフレームアニメーション
-  const heightAnimation = keyframes `
+  const heightAnimation = keyframes`
      from {
         opacity:0;
     }
@@ -19,7 +19,7 @@
     }
   `;
 
-  const searchBlock  = css `
+  const searchBlock  = css`
     background: ${Color.PointColor};
     padding: 16px 8px;
     list-style-type: none;
@@ -35,19 +35,40 @@
       display: block;
     }
   `
-   const list = css `
+  const list = css `
     background: ${Color.BaseColor};
     margin-bottom: 16px;
     border-radius: 4px;
   `
 
-  const style = css({
-    backgroundColor: 'red'
-  });
+  //mixin1
+  const selectedStyle = css`
+    ${baseStyle}
+    background: hotpink;
+  `
+
+  //mixin2
+  const regularStyle = css`
+    ${square('24px','12px')}
+  `;
+
+  const largeStyle = css`
+    ${square('48px')}
+  `;
+
+  // const regularStyle = css({
+  //   ...square('24px'),
+  // });
+
+  // const largeStyle = css({
+  //   ...square('48px'),
+  // });
+
+
 </script>
 
 <ul class={searchBlock}>
-  <li class="u-fz-10 {list}" >
+  <li class="{selectedStyle} {list} {regularStyle}" >
     <AppSearchItemFreeword value={searchFreeword} />
   </li>
   <AppSearchItemLabel type="place" value="" />

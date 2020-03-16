@@ -10,6 +10,7 @@
   export let width = 24;
   export let height = 24;
 
+
   let attr = {
     none: {
       src: ""
@@ -53,6 +54,8 @@
   };
 
   let isActive = true;
+
+
 </script>
 
 <img

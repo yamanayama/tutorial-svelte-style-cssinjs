@@ -1,4 +1,4 @@
-  import { css } from "emotion";
+import { css } from "emotion";
 
 // sp = 480
 // tab = 768
@@ -11,6 +11,18 @@ export const mq = breakpoints.map(
 )
 
 //utility
+export function square(val , key) {
+  return {
+    width: val,
+    height: key,
+  };
+}
+
+export const baseStyle = css `
+  display: flex;
+  border-bottom: 1px solid red;
+`;
+
 export const utilityStyles = css `
 	.u-fz-10 {
     font-size: 1rem !important;
